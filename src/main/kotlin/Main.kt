@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
 }
 
 fun fitMoreFish(tankSize: Int, currentFish: Array<Int>, fishSize: Int, hasDecorations: Boolean) {
-    
+
 }
 
 fun feedTheFish() {
@@ -17,7 +17,7 @@ fun feedTheFish() {
     println("Today is $day and the fish eat $food")
 
     if(shouldChangeWater(day)) {
-        println("Change the water today)
+        println("Change the water today")
     }
 }
 
