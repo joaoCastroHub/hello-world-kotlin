@@ -2,9 +2,18 @@ import java.util.*
 
 fun main(args: Array<String>) {
     println("Hello, ${args[0]}!")
-
     //alimenta o peixe
     feedTheFish()
+
+    var bubbles = 0
+    while(bubbles < 50) {
+        bubbles ++
+    }
+
+    //funcao de repeticao
+    repeat(2) {
+        println("Fish is swimming")
+    }
 }
 
 fun feedTheFish() {
@@ -17,9 +26,21 @@ fun feedTheFish() {
     }
 }
 
-fun shouldChangeWater(day: String, temperature: Int = 22, dirty: Int = 20): Boolean {
-    return true
+fun getDirtySensorReading() = 20
+
+fun shouldChangeWater(day: String, temperature: Int = 22, dirty: Int = getDirtySensorReading()): Boolean {
+    fun isTooHot(temperature: Int) = temperature > 30
+    fun isDirty(dirty: Int) = dirty > 30
+    fun isSunday(day: String) = day == "Sunday"
+
+   return when {
+       isTooHot(temperature) -> true
+       isDirty(dirty) -> true
+       isSunday(day) -> true
+       else -> false
+   }
 }
+
 
 fun fishFood(day: String): String {
     return  when(day) {
