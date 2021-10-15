@@ -1,4 +1,5 @@
 import Exercises.SimpleSpice
+import Exercises.Spice
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -21,6 +22,11 @@ fun main(args: Array<String>) {
 //    TOMPEROS
     val simpleSpice = SimpleSpice()
     println("${simpleSpice.name} ${simpleSpice.heat}")
+
+    var spices = listOf(Spice("curry", "Mild"), Spice("Lady fingers", "Hot"), Spice("Black Pepper", "Burning"))
+    var coolSpices = spices.filter { it.heat < 10 }
+    fun makeSalt() = Spice("Salt")
+
 }
 
 fun feedTheFish() {
