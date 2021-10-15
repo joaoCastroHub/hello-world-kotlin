@@ -1,19 +1,26 @@
+import Exercises.SimpleSpice
 import java.util.*
 
 fun main(args: Array<String>) {
-    println("Hello, ${args[0]}!")
-    //alimenta o peixe
-    feedTheFish()
+//    FISH CONCEPTS
+//    println("Hello, ${args[0]}!")
+//    //alimenta o peixe
+//    feedTheFish()
+//
+//    var bubbles = 0
+//    while(bubbles < 50) {
+//        bubbles ++
+//    }
+//
+//    //funcao de repeticao
+//    repeat(2) {
+//        println("Fish is swimming")
+//    }
+//    END FISH CONCEPTS
 
-    var bubbles = 0
-    while(bubbles < 50) {
-        bubbles ++
-    }
-
-    //funcao de repeticao
-    repeat(2) {
-        println("Fish is swimming")
-    }
+//    TOMPEROS
+    val simpleSpice = SimpleSpice()
+    println("${simpleSpice.name} ${simpleSpice.heat}")
 }
 
 fun feedTheFish() {
